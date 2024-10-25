@@ -6,6 +6,10 @@
   padding: 0px;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Exo', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -125,7 +129,10 @@ h1 span:nth-child(15) {
   background: #E1DBD1;
   background: -webkit-linear-gradient(to left, #D8829D, #E1DBD1);
   width: 100%;
-  height: 130vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .secondary{
@@ -133,9 +140,8 @@ h1 span:nth-child(15) {
 }
 
 .circles {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  bottom: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -148,7 +154,7 @@ h1 span:nth-child(15) {
   width: 20px;
   height: 20px;
   background: rgba(255, 255, 255, 0.2);
-  animation: animate 25s linear infinite;
+  animation: animate 20s linear infinite;
   bottom: -150px;
 }
 
@@ -260,7 +266,7 @@ h1 span:nth-child(15) {
 
 .scrollbar{
   width: 95%;
-  height: 300px;
+  height: 42vh;
   background-color: rgba(255, 255, 255, 0.5);
   z-index: 1;
   position: absolute;
@@ -280,6 +286,10 @@ h1 span:nth-child(15) {
 
 .second{
   top: 81%;
+}
+
+.third{
+  top: 131%;
 }
 
 ::-webkit-scrollbar {
@@ -316,6 +326,10 @@ img{
   top: 73%;
 }
 
+.other{
+  top: 123%;
+}
+
 a{
   text-decoration: none;
   color: white;
@@ -328,17 +342,19 @@ a:hover {
 }
 
 
-.home > img{
+.home > img {
   width: 70px;
   height: auto;
   position: absolute;
   top: 2%;
   left: 2%;
   z-index: 3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.home:hover{
-  box-shadow: none;
+.home:hover > img {
+  transform: scale(1.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
 
@@ -396,8 +412,8 @@ input ~ .tab {
 }
 
 .tabPics{
-  height: 517px;
-  width: 500px;
+  height: 62vh;
+  width: 30vw;
 }
 
 .textContainer{
@@ -441,64 +457,67 @@ input ~ .tab {
 /* MEDIA QUERIES */
 @media (max-width: 710px) {
   h1 span {
-    font-size: 40px;
+    font-size: 5vh;
   }
 }
 
 @media (max-width: 1200px) {
   .insTitles {
-    font-size: 60px;
+    font-size: 8vh; 
   }
-  .projDescrips{
-    font-size: 18px;
+  .projDescrips {
+    font-size: 2.4vh; 
   }
 }
 
 @media (max-width: 1050px) {
   .insTitles {
-    font-size: 40px;
+    font-size: 5vh; 
   }
-  .projDescrips{
-    font-size: 15px;
+  .projDescrips {
+    font-size: 2vh; 
   }
-  .tabPics{
-    height: 414px;
-    width: 400px;
+  .tabPics {
+    height: 52vh;
+    width: 40vw;  
   }
-  .tabs{
-    height: 60%;
+  .tabs {
+    height: 60vh;
   }
-  .projDescrips{
-    height: 50%;
+  .projDescrips {
+    height: 50vh;
   }
 }
 
 @media (max-width: 810px) {
-  .tabPics{
-    height: 314px;
-    width: 300px;
+  .tabPics {
+    height: 40vh;
+    width: 35vw;  
   }
-  .tabs{
-    height: 50%;
+  .tabs {
+    height: 50vh;
   }
   .insTitles {
-    font-size: 35px;
+    font-size: 4.4vh; 
   }
-  .projDescrips{
-    font-size: 12px;
-    height: 40%;
+  .projDescrips {
+    font-size: 1.6vh; 
+    height: 40vh;
   }
 }
 
 @media (max-width: 630px) {
-  .projDescrips{
-    font-size: 10px;
-    height: 40%;
+  .projDescrips {
+    font-size: 1.4vh;
+    height: 40vh;
   }
 }
 
 @media (max-width: 600px) {
   .insTitles {
-    font-size: 30px;
+    font-size: 4vh;
+  }
+  .tabPics {
+    height: 35vh;
   }
 }
