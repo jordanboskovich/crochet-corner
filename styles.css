@@ -14,6 +14,7 @@ body {
   font-family: 'Exo', sans-serif;
   -webkit-font-smoothing: antialiased;
   background-color: #E1DBD1;
+  font-size: 3vh;
 }
 
 /* TITLE ANIMATION */
@@ -115,7 +116,6 @@ h1 span:nth-child(15) {
   width: 100%;
   position: absolute;
   top: 10%;
-
 }
 
 .context h1 {
@@ -270,7 +270,7 @@ h1 span:nth-child(15) {
   background-color: rgba(255, 255, 255, 0.5);
   z-index: 1;
   position: absolute;
-  top: 31%;
+  top: 55%;
   right: 1.5%;
   display: flex;
   justify-content: start;
@@ -285,11 +285,11 @@ h1 span:nth-child(15) {
 }
 
 .second{
-  top: 81%;
+  top: 105%;
 }
 
 .third{
-  top: 131%;
+  top: 155%;
 }
 
 ::-webkit-scrollbar {
@@ -312,7 +312,7 @@ img{
 
 .pagelink{
   position: absolute;
-  top: 23%;
+  top: 47%;
   left: 2.3%;
   font-size: 50px;
   color: #fff;
@@ -323,11 +323,11 @@ img{
 }
 
 .inspo{
-  top: 73%;
+  top: 98%;
 }
 
 .other{
-  top: 123%;
+  top: 148%;
 }
 
 a{
@@ -363,7 +363,8 @@ input{
   display: none; /* hide radio buttons */
 }                
 input + label{ 
-  display: inline-block; /* show labels in line */
+  display: inline-block; 
+  font-size: 2vh;
 } 
 input ~ .tab{
   display: none; /* hide contents */
@@ -454,6 +455,41 @@ input ~ .tab {
   margin-left: 10%;
 }
 
+.descriptionBox{
+  width: 90%;
+  height: 30%;
+  margin: auto;
+  margin-top: 7%;
+  padding-left: 3%;
+}
+
+#depopLink{
+  color: #a9a179;
+}
+
+#depopLink:hover{
+  color: white;
+  box-shadow: inset 0 40px 0 0 #c6bba9;
+}
+
+
+.welcome-strip {
+  width: 95%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 14px;
+  text-align: center;
+  font-size: 2.5vh;
+  color: #99947c;
+  font-family: 'Sofia', cursive;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 25vh;
+}
+
+
 /* MEDIA QUERIES */
 @media (max-width: 710px) {
   h1 span {
@@ -504,6 +540,9 @@ input ~ .tab {
     font-size: 1.6vh; 
     height: 40vh;
   }
+  body{
+    font-size: 2vh;
+  }
 }
 
 @media (max-width: 630px) {
@@ -519,5 +558,24 @@ input ~ .tab {
   }
   .tabPics {
     height: 35vh;
+  }
+}
+
+@media (max-width: 460px) {
+  body{
+    font-size: 1.6vh;
+  }
+}
+
+
+@media (max-width: 340px) {
+  body{
+    font-size: 1.3vh;
+  }
+}
+
+@media (max-width: 245px) {
+  body{
+    font-size: 1vh;
   }
 }
